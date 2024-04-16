@@ -64,6 +64,11 @@ body {
   color: var(--black-color);
 }
 
+.white-mode .custom-box {
+  background-color: var(--white-color-smoke-bg);
+  color: var(--black-color);
+}
+
 .white-mode .container-icon {
   background-color: var(--white-color-smoke-bg);
 }
@@ -106,6 +111,10 @@ body {
 }
 
 .white-mode .project-box {
+  background-color: var(--purple-smoke-color);
+}
+
+.white-mode .youtube-box {
   background-color: var(--purple-smoke-color);
 }
 

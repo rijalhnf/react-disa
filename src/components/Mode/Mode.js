@@ -1,21 +1,92 @@
+// import { useNavigate } from "react-router-dom";
 import "./Mode.css";
 import { RiSunFill, RiMoonFill } from "react-icons/ri";
+// import { Dropdown, Space } from 'antd';
 
-export default function Mode({ handleModeChange, setMode }) {
+// function DropdownItem({ link, name }) {
+//   const navigate = useNavigate();
+//   function handleNav(path) {
+//     return function (event) {
+//       event.preventDefault();
+//       navigate(path);
+//     };
+//   }
+//   return (
+//     <a href="_blank" onClick={handleNav(link)}>
+//       {name}
+//     </a>
+//   );
+// }
+
+
+export default function Mode({ handleModeChange, setMode, fill }) {
+
+  // const projects = [
+  //   {
+  //     label: (
+  //       <DropdownItem link="/calendar" name="Calendar" />
+  //     ),
+  //     key: '0',
+  //   },
+  //   {
+  //     label: (
+  //       <DropdownItem link="/weather" name="Weather" />
+
+  //     ),
+  //     key: '1',
+  //   },
+  //   {
+  //     label: (
+  //       <DropdownItem link="/meals" name="Meals" />
+
+  //     ),
+  //     key: '2',
+  //   },
+  // ];
+
+  // const portfolio = [
+  //   {
+  //     label: (
+  //       <DropdownItem link="/contentcreator" name="Content Creator" />
+
+  //     ),
+  //     key: '0',
+  //   },
+  //   {
+  //     label: (
+  //       <DropdownItem link="/college" name="College" />
+
+  //     ),
+  //     key: '1',
+  //   },
+  //   {
+  //     label: (
+  //       <DropdownItem link="/developer" name="Developer" />
+
+  //     ),
+  //     key: '2',
+  //   },
+  // ];
+
   return (
     <section className=" container-mode">
-      <div className="mode-left white-text">
+      {/* <div className="mode-left white-text">
         <ul>
-          <li>
-            <a href="#about">Me</a>
-          </li>
-          <li>
-            <a href="#work" >Works</a>
-          </li>
+          {fill === "default" ?
+            <> <li>
+              <a href="/#about">Me</a>
+            </li>
+              <li>
+                <a href="/#work" >Works</a>
+              </li></> :
+            <><li>
+              <DropdownItem link="/" name="Home ⚛" />
+            </li></>}
+
           <li>
             <a target="_blank" href="https://github.com/rijalhnf/react-cutioluis" rel="noreferrer">
-              <span class="link-decoration">Source</span>
-              <span class="icon-change">
+              <span className="link-decoration">Source</span>
+              <span className="icon-change">
                 <img
                   src="https://cdn.sanity.io/images/tljndwv6/production/182744b0662c24bb7d37846566bdb7ebee3470d6-15x15.svg"
                   alt="External Link"
@@ -27,8 +98,31 @@ export default function Mode({ handleModeChange, setMode }) {
               </span>
             </a>
           </li>
+
+          <li style={{ cursor: "pointer" }} key="items">
+            <Dropdown
+              menu={{ items: projects }} theme="dark">
+              <a onClick={(e) => e.preventDefault()}>
+                <Space>
+                  Project ⬇
+                </Space>
+              </a>
+            </Dropdown>
+          </li>
+
+          <li style={{ cursor: "pointer" }} key="portfolio">
+            <Dropdown
+              menu={{ items: portfolio }} theme="dark">
+              <a onClick={(e) => e.preventDefault()}>
+                <Space>
+                  Portfolio ⬇
+                </Space>
+              </a>
+            </Dropdown>
+          </li>
+
         </ul>
-      </div>
+      </div> */}
       <button onClick={handleModeChange} className="container-icon">
         {setMode ? (
           <RiMoonFill className="mode-icon" />

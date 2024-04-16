@@ -6,27 +6,15 @@ export const About = () => {
     <section id="about" className="container container-about">
       <div className="about-left">
         <span className="purple-text center-text">
-          ✋ Rijal Hanif{" "}
+          ✋ Pengenalan{" "}
           <span className="purple-smoke-text">- Introduction</span>{" "}
         </span>
         <p className="gray-text center-text">
-          "Meet Rijal Hanif, the financial wizard who moonlights as a coding ninja, design enthusiast, photography aficionado, and bookworm extraordinaire. By day, he tackles numbers and customs as an accounting maestro at PKN STAN. By night, he's diving into lines of code, crafting stunning designs, capturing moments with his camera, and delving into the enchanting world of literature."{" "}
+          "Selamat datang di profil saya! Saya Adila Zahra Faradisa, lulusan Fisika dari Institut Teknologi Sepuluh Nopember (ITS) Surabaya. Saya telah memiliki pengalaman selama 2 tahun di bidang Data Engineering di salah satu Badan Usaha Milik Daerah (BUMD) di Jakarta. Saya sangat antusias dan bersemangat dalam menjelajahi dunia teknologi informasi, khususnya dalam bidang Data Engineering. Terima kasih atas kunjungan Anda di halaman saya!"{" "}
         </p>
-        {/* <span className="white-text">
-          <a href="https://github.com/rijalhnf">Portfolio</a>
-        </span> 
-        <ul className="tech-stack">
-          <b>Portofolio</b>
-          <li>Web Developer</li>
-          <li>Designer</li>
-          <li>Photographer</li>
-          <li>Cinematographer</li>
-          <li>Movie Editor</li>
-        </ul>*/}
-        {/* <a className="about-see" href="#">More{"->"} </a>*/}
       </div>
-      <div className="about-right">
-        <img src={iconImage} alt="" />
+      <div className="about-right" style={{ paddingTop: "20px" }}>
+        <img src={iconImage} alt="" style={{ paddingTop: "0px", borderRadius: "15px" }} />
       </div>
     </section>
   );
