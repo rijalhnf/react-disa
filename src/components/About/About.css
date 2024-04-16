@@ -1,0 +1,71 @@
+.container-about {
+  margin: 30px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: var(--white-smoke-color);
+}
+
+.about-left {
+  display: flex;
+  gap: 0.4rem;
+  flex-direction: column;
+  max-width: auto;
+}
+
+.left-skills {
+  margin: 1rem 0;
+}
+
+.about-right {
+  text-align: center;
+}
+
+.about-right img {
+  padding-top: 30px;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 2.5rem;
+  height: auto;
+}
+
+.tech-stack {
+  margin-top: 1rem;
+  margin-left: 1.1rem;
+}
+
+.about-see {
+  border-bottom: 1px solid var(--purple-color);
+  padding-bottom: 2px;
+  max-width: fit-content;
+}
+
+@media (max-width: 425px) {
+  .about-left {
+    padding: 20px;
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .container-about {
+    display: block;
+  }
+
+  .about-right img {
+    margin: 0 1rem;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.center-li {
+  text-align: center;
+}
