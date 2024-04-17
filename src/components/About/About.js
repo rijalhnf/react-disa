@@ -10,7 +10,7 @@ export const About = () => {
           <span className="purple-smoke-text">- Introduction</span>{" "}
         </span>
         <p className="gray-text center-text">
-          "Selamat datang di profil saya! Saya Adila Zahra Faradisa, lulusan Fisika dari Institut Teknologi Sepuluh Nopember (ITS) Surabaya. Saya telah memiliki pengalaman selama 2 tahun di bidang Data Engineering di salah satu Badan Usaha Milik Daerah (BUMD) di Jakarta. Saya sangat antusias dan bersemangat dalam menjelajahi dunia teknologi informasi, khususnya dalam bidang Data Engineering. Terima kasih atas kunjungan Anda di halaman saya!"{" "}
+          "Selamat datang di profil saya! Saya Adila Zahra Faradisa, lulusan Fisika dari Institut Teknologi Sepuluh Nopember (ITS) Surabaya. Saya telah memiliki pengalaman selama 2 tahun di bidang Data Engineering di salah satu Badan Usaha Milik Daerah (BUMD) di Jakarta. Saya sangat antusias dan bersemangat dalam menjelajahi dunia teknologi informasi, khususnya dalam bidang Data Engineering/Data Management. Terima kasih atas kunjungan Anda di halaman saya!"{" "}
         </p>
       </div>
       <div className="about-right" style={{ paddingTop: "20px" }}>
