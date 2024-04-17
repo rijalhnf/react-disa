@@ -1,4 +1,4 @@
-import "./App.css";
+// import "./App.css";
 import { useState } from "react";
 
 import Mode from "../../components/Mode/Mode";
@@ -7,13 +7,14 @@ import { About } from "../../components/About/About";
 // import { Bio } from "../../components/Bio/Bio";
 // import { Footer } from "../../components/Footer/Footer";
 // import Project from "../../components/Project/Project";
-import Calendar from "../calendar/Calendar";
+// import Calendar from "../calendar/Calendar";
 // import College from "../college/College"
-// import ContentCreator from "../contentCreator/ContentCreator"
+import ContentCreator from "../contentCreator/ContentCreator"
 // import Developer from "../developer/Developer"
 // import Meals from "../meals/Meals"
 // import Weather from "../weather/Weather";
 import { ConfigProvider, theme, } from "antd";
+import { Footer } from "../../components/Footer/Footer";
 
 
 // function Content({ props }) {
@@ -42,7 +43,7 @@ import { ConfigProvider, theme, } from "antd";
 //   }
 // }
 
-function Home({ fill }) {
+function Home() {
   const [whiteMode, setQuietMode] = useState(false);
 
   const handleModeChange = () => {
@@ -63,11 +64,13 @@ function Home({ fill }) {
         }
       }}>
 
-        <Mode setMode={whiteMode} handleModeChange={handleModeChange} fill={fill} />
+        <Mode setMode={whiteMode} handleModeChange={handleModeChange} />
 
         <Header />
         <About />
-        <Calendar />
+        {/* <Calendar /> */}
+        <ContentCreator />
+        <Footer />
         {/* <Content props={fill} /> */}
 
       </ConfigProvider>

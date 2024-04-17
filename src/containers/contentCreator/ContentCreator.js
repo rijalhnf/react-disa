@@ -1,5 +1,6 @@
 import { Flex } from 'antd';
 import { useState, useEffect } from 'react';
+import "./ContentCreator.css"
 
 function getWindowDimensions() {
     const { innerWidth: width, innerHeight: height } = window;
@@ -24,21 +25,62 @@ function useWindowDimensions() {
     return windowDimensions;
 }
 
-function Kotak({ judul, isi, children }) {
-    return (
-        <div style={{ textAlign: "center", marginTop: "10px" }}>
-            <div className="youtube-box">
-                {children}
-                <div style={{ padding: "10px" }}>
-                    <span className="white-text center-text">{judul}</span>
-                    <p className="gray-text text-box">
-                        {isi}
-                    </p>
-                </div>
-            </div>
-        </div>
-    )
+const data = {
+    "events": [
+        {
+            "name": "Portfolio 1",
+            "date": "12 Maret 2021",
+            "keteranganparagrafsatu": "Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi standar contoh teks sejak tahun 1500an, saat seorang tukang cetak yang tidak dikenal mengambil sebuah kumpulan teks dan mengacaknya untuk menjadi sebuah buku contoh huruf.",
+            "keteranganparagrafdua": "Ia mulai dipopulerkan pada tahun 1960 dengan diluncurkannya lembaran-lembaran Letraset yang menggunakan kalimat-kalimat dari Lorem Ipsum, dan seiring munculnya perangkat lunak Desktop Publishing seperti Aldus PageMaker juga memiliki versi Lorem Ipsum.",
+            "link": "https://www.youtube.com/embed/pBKCxhT3PUE?si=C660E1gK-q0tS86K",
+        },
+        {
+            "name": "Portfolio 2",
+            "date": "26 Mei 2022",
+            "keteranganparagrafsatu": "Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi standar contoh teks sejak tahun 1500an, saat seorang tukang cetak yang tidak dikenal mengambil sebuah kumpulan teks dan mengacaknya untuk menjadi sebuah buku contoh huruf.",
+            "keteranganparagrafdua": "Ia mulai dipopulerkan pada tahun 1960 dengan diluncurkannya lembaran-lembaran Letraset yang menggunakan kalimat-kalimat dari Lorem Ipsum, dan seiring munculnya perangkat lunak Desktop Publishing seperti Aldus PageMaker juga memiliki versi Lorem Ipsum.",
+            "link": "https://www.youtube.com/embed/pBKCxhT3PUE?si=C660E1gK-q0tS86K",
+        },
+        {
+            "name": "Portfolio 3",
+            "date": "28 Mei 2022",
+            "keteranganparagrafsatu": "Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi standar contoh teks sejak tahun 1500an, saat seorang tukang cetak yang tidak dikenal mengambil sebuah kumpulan teks dan mengacaknya untuk menjadi sebuah buku contoh huruf.",
+            "keteranganparagrafdua": "Ia mulai dipopulerkan pada tahun 1960 dengan diluncurkannya lembaran-lembaran Letraset yang menggunakan kalimat-kalimat dari Lorem Ipsum, dan seiring munculnya perangkat lunak Desktop Publishing seperti Aldus PageMaker juga memiliki versi Lorem Ipsum.",
+            "link": "https://www.youtube.com/embed/pBKCxhT3PUE?si=C660E1gK-q0tS86K",
+        },
+        {
+            "name": "Portfolio 4",
+            "date": "14 Oktober 2023",
+            "keteranganparagrafsatu": "Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi standar contoh teks sejak tahun 1500an, saat seorang tukang cetak yang tidak dikenal mengambil sebuah kumpulan teks dan mengacaknya untuk menjadi sebuah buku contoh huruf.",
+            "keteranganparagrafdua": "Ia mulai dipopulerkan pada tahun 1960 dengan diluncurkannya lembaran-lembaran Letraset yang menggunakan kalimat-kalimat dari Lorem Ipsum, dan seiring munculnya perangkat lunak Desktop Publishing seperti Aldus PageMaker juga memiliki versi Lorem Ipsum.",
+            "link": "https://www.youtube.com/embed/pBKCxhT3PUE?si=C660E1gK-q0tS86K",
+        },
+    ]
 }
+
+// function Kotak({ judul, isi, tanggal, children }) {
+//     return (
+//         <div style={{ textAlign: "center", marginTop: "10px" }}>
+//             <div className="youtube-box">
+//                 {children}
+//                 <div
+//                     align="center"
+//                     justify='flex-start'
+//                     style={{ padding: 25 }}>
+
+//                     <p>
+//                         <span style={{ fontSize: "22px", fontWeight: "bold" }}>{judul}</span>
+//                         <br />
+//                         {tanggal}
+//                         <br />
+//                         {isi}
+//                     </p>
+
+//                 </div>
+//             </div>
+//         </div>
+//     )
+// }
 
 
 
@@ -50,9 +92,12 @@ function Frame({ src }) {
     // if (width < 453) setWidthAdapt("360")
 
     useEffect(() => {
-        if (width > 453) {
-            setWidthAdapt("448");
-            setHeightAdapt("252");
+        if (width > 820) {
+            setWidthAdapt("800");
+            setHeightAdapt("450");
+        } else if (width > 413 && width < 820) {
+            setWidthAdapt(width - 40);
+            setHeightAdapt((width - 40) / 2);
         } else {
             setWidthAdapt("360");
             setHeightAdapt("202");
@@ -73,7 +118,8 @@ function Frame({ src }) {
 function ContentCreator() {
     return (
         <div style={{ marginLeft: "20px", marginRight: "20px" }}>
-            <h1 className="header-title" style={{ textAlign: "center", marginBottom: "10px" }}> Portfolio Desain & Video.</h1>
+
+            {/* <h1 className="header-title" style={{ textAlign: "center", marginBottom: "10px" }}> Portfolio Desain & Video.</h1>
 
             <div style={{ textAlign: "center", display: "flex", flexWrap: "wrap", justifyContent: "center", marginTop: "10px", marginBottom: "10px" }}>
                 <div className="project-box">
@@ -82,11 +128,52 @@ function ContentCreator() {
                         A content creator crafts engaging and informative material across various mediums, fostering connections, sparking conversations, and inspiring audiences with their creativity and insights.
                     </p>
                 </div>
-            </div>
+            </div> */}
+
+            <section id="about" className="container container-about">
+                <div className="about-left">
+                    <span className="purple-text center-text">
+                        💼 Portfolio{" "}
+                        <span className="purple-smoke-text">- Data Engineering/Management</span>{" "}
+                    </span>
+                    <p className="gray-text center-text">
+                        "Berikut kumpulan portfolio yang pernah saya kerjakan"{" "}
+                    </p>
+                </div>
+            </section>
 
             <Flex wrap="wrap" gap="middle" justify='center' style={{ paddingBottom: "20px" }}>
 
-                <Kotak judul="Apa itu Just-In-Time?" isi="------">
+                {data.events.map((event) =>
+
+                    <div style={{ textAlign: "center", marginTop: "10px" }}>
+                        <div className="youtube-box">
+                            <Frame src={event.link} />
+                            <div
+                                align="center"
+                                justify='flex-start'
+                                style={{ padding: 25 }}>
+
+                                <p className="white-text left-text">
+                                    {/* <h1 className="header-title-portfolio">{event.name}</h1> */}
+                                    <span className="purple-text" style={{ fontSize: "30px", fontWeight: "bold" }}>{event.name}</span>
+                                    <br />
+                                    {event.date}
+                                    <br />
+                                    <br />
+                                    {event.keteranganparagrafsatu}
+                                    <br />
+                                    <br />
+                                    {event.keteranganparagrafdua}
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                )
+                }
+
+                {/* <Kotak judul="Apa itu Just-In-Time?" isi="------" tanggal="12 oktober 2022">
                     <Frame src="https://www.youtube.com/embed/pBKCxhT3PUE?si=C660E1gK-q0tS86K" />
                 </Kotak>
 
@@ -100,33 +187,7 @@ function ContentCreator() {
 
                 <Kotak judul="Motion Graphics: Introducing seaport" isi="------">
                     <Frame src="https://www.youtube.com/embed/ZxjGDQNHDqY?si=Sde5j7-oZtQBroTg" />
-                </Kotak>
-
-                <Kotak judul="Membaca 70 buku dalam satu tahun" isi="------">
-                    <Frame src="https://www.youtube.com/embed/H6K9-yILox8?si=fhsERaZb28lFfb3R" />
-                </Kotak>
-
-                <Kotak judul="Kaleidoskop 2020" isi="------">
-                    <Frame src="https://www.youtube.com/embed/N_xwUTPP-Ew?si=5wTFjw41ANc0S1cV" />
-                </Kotak>
-                <Kotak judul="Animation Movie: EARLY" isi="------">
-                    <Frame src="https://www.youtube.com/embed/thwvVe6ZYk8?si=vPOyVPmrUG9i7jgR" />
-                </Kotak>
-
-                <Kotak judul="Kaleidoskop Ramadan 1442 H" isi="------">
-                    <Frame src="https://www.youtube.com/embed/NsrDxKE1WQg?si=gCluN-9wnCRxw5Oo" />
-                </Kotak>
-
-
-
-                <Kotak judul="Kemenkeu Mengajar 3 | 2018" isi="------">
-                    <Frame src="https://www.youtube.com/embed/gnKAY9Hv7R0?si=Ji8mSLw121xzBFYi" />
-                </Kotak>
-
-
-
-
-
+                </Kotak> */}
 
 
             </Flex>

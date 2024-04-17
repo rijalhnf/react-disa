@@ -1,0 +1,18 @@
+.youtube-box {
+    max-width: 800px;
+    border-radius: 10px;
+    width:inherit;
+    background-color: var(--gray-color);
+  }
+
+.center-text {
+    text-align: center;
+  }
+
+.left-text {
+    text-align:justify;
+  }
+
+.justify-text {
+    text-align:left;
+  }
