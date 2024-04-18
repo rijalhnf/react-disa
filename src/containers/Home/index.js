@@ -44,7 +44,7 @@ import { Footer } from "../../components/Footer/Footer";
 // }
 
 function Home() {
-  const [whiteMode, setQuietMode] = useState(false);
+  const [whiteMode, setQuietMode] = useState(true);
 
   const handleModeChange = () => {
     setQuietMode(!whiteMode);
@@ -72,6 +72,8 @@ function Home() {
         <ContentCreator />
         <Footer />
         {/* <Content props={fill} /> */}
+
+
 
       </ConfigProvider>
 
