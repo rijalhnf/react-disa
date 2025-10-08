@@ -65,8 +65,8 @@ export default function Portfolio() {
                                 style={{ width: "100%", height: "300px", objectFit: "cover", borderRadius: "10px 10px 0 0" }}
                             />
                             <div style={{ padding: 20, flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                                <span style={{ fontSize: "22px", fontWeight: "bold", color: "#5c2545ff" }}>{portofolio.name}</span>
-                                <p style={{ marginTop: 10, color: "#5c2545ff" }}>{portofolio.keterangan}</p>
+                                <span style={{ fontSize: "22px", fontWeight: "bold" }} className='purple-text'>{portofolio.name}</span>
+                                <p style={{ marginTop: 10 }} className='gray-text'>{portofolio.keterangan}</p>
                             </div>
                         </Card>
                     </Col>
