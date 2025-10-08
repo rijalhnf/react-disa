@@ -1,20 +1,17 @@
 import "./About.css";
-import iconImage from "../../images/logo.jpg";
+// import profilPhoto from "../../images/profilPhoto.jpeg";
 
 export const About = () => {
   return (
     <section id="about" className="container container-about">
-      <div className="about-left">
+      <div className="about-left" style={{ marginTop: "20px" }}>
         <span className="purple-text center-text">
           ✋ Pengenalan{" "}
           <span className="purple-smoke-text">- Introduction</span>{" "}
         </span>
         <p className="gray-text center-text">
-          "Selamat datang di profil saya! Saya Adila Zahra Faradisa, lulusan Fisika dari Institut Teknologi Sepuluh Nopember (ITS) Surabaya. Saya telah memiliki pengalaman selama 2 tahun di bidang Data Management di salah satu Badan Usaha Milik Daerah (BUMD) di Jakarta. Saya sangat antusias dan bersemangat dalam menjelajahi dunia teknologi informasi, khususnya dalam bidang Data Management/Data Engineering. Terima kasih atas kunjungan Anda di halaman saya!"
+          "Data Analyst with a strong foundation in physics and a passion for transforming public transportation through data-driven insights. At Transjakarta, I’ve automated reporting workflows, optimized operational metrics using Python and SQL, and delivered actionable customer behavior analyses. Winner of RUBI (Ruang Berbagi Inovasi) for streamlining daily reporting with Tableau Prep. Currently expanding my expertise in data engineering to deepen impact in urban mobility and public service innovation"
         </p>
-      </div>
-      <div className="about-right" style={{ paddingTop: "20px" }}>
-        <img src={iconImage} alt="" style={{ paddingTop: "0px", borderRadius: "15px" }} />
       </div>
     </section>
   );

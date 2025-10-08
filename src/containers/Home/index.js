@@ -9,12 +9,13 @@ import { About } from "../../components/About/About";
 // import Project from "../../components/Project/Project";
 // import Calendar from "../calendar/Calendar";
 // import College from "../college/College"
-import ContentCreator from "../contentCreator/ContentCreator"
+// import ContentCreator from "../contentCreator/ContentCreator"
 // import Developer from "../developer/Developer"
 // import Meals from "../meals/Meals"
 // import Weather from "../weather/Weather";
 import { ConfigProvider, theme, } from "antd";
 import { Footer } from "../../components/Footer/Footer";
+import Portfolio from "../portofolio/Portofolio";
 
 
 // function Content({ props }) {
@@ -44,10 +45,10 @@ import { Footer } from "../../components/Footer/Footer";
 // }
 
 function Home() {
-  const [whiteMode, setQuietMode] = useState(true);
+  const [whiteMode, setWhiteMode] = useState(true);
 
   const handleModeChange = () => {
-    setQuietMode(!whiteMode);
+    setWhiteMode(!whiteMode);
   };
 
 
@@ -68,8 +69,9 @@ function Home() {
 
         <Header />
         <About />
+        <Portfolio />
         {/* <Calendar /> */}
-        <ContentCreator />
+        {/* <ContentCreator /> */}
         <Footer />
         {/* <Content props={fill} /> */}
 

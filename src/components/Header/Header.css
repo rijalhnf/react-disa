@@ -18,10 +18,10 @@
   -moz-text-fill-color: transparent;
 }
 
-.header-title-portfolio {
+.header-title-name {
   font-size: 2rem;
   font-weight: bold;
-  /* margin-bottom: 0.5rem; */
+  margin-bottom: 0rem;
   background: var(--gradient-color);
   background-size: 100%;
   background-repeat: repeat;
@@ -33,7 +33,14 @@
 
 .header-title-box {
   border-radius: 10px;
-  padding: 1.5rem 3rem;
+  padding: 1rem 2rem;
   background-color: var(--gray-color);
   color: var(--white-color);
 }
+
+.white-mode .header-title-box {
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  background-color: #ff7ab8;
+}
+

@@ -1,5 +1,6 @@
 .youtube-box {
-    max-width: 800px;
+    max-width: 600px;
+    min-width: none;
     border-radius: 10px;
     width:inherit;
     background-color: var(--gray-color);

@@ -2,21 +2,22 @@
   /* Dark Mode */
   --black-color-bg: #0d1117;
   --gray-color: #161b22;
-  --purple-color: #acb4fe;
-  --purple-smoke-color: #cdd0f3;
+  --purple-color: #ff7ab8; /* primary accent — moved to pink */
+  --purple-smoke-color: #ffd6e8; /* soft pink panels */
   --white-smoke-color: #8b949e;
   --white-color: #e5e5e5;
-  --gradient-color: linear-gradient(99.51deg, #cbbee7 9.03%, #ffffff 89.53%);
+  --gradient-color: linear-gradient(99.51deg, #ffc4dd 9.03%, #ffffff 89.53%);
 
   /* Light Mode */
-  --white-color-bg: #e1e3f9;
-  --white-color-smoke-bg: #cdd0f3;
-  --purple-dark-color: #ae88fe;
+  /* stronger pink-tinted light mode */
+  --white-color-bg: #fff0f6; /* light pink background */
+  --white-color-smoke-bg: #ffd6e8; /* panel / box pink */
+  --purple-dark-color: #ff4f9e; /* bolder pink accent */
   --black-color: #212121;
   --white-gradient-color: linear-gradient(
     99.51deg,
-    #acb4fe 9.03%,
-    #ae88fe 89.53%
+    #ffb6d9 80.03%,
+    #ffcbdfff 95.53%
   );
 }
 
@@ -32,7 +33,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: var(--white-smoke-colorcolor);
+  color: var(--white-smoke-color);
 }
 
 .dark-mode {
@@ -137,11 +138,7 @@ body {
 }
 
 .white-mode .line {
-  background: linear-gradient(
-    180deg,
-    #e1e3f9 0%,
-    var(--purple-dark-color) 100%
-  );
+  background: linear-gradient(180deg, var(--white-color-bg) 0%, var(--purple-dark-color) 100%);
 }
 
 .container {

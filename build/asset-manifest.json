@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5857ab15.css",
+    "main.js": "/static/js/main.ee10f602.js",
+    "static/js/787.8977447c.chunk.js": "/static/js/787.8977447c.chunk.js",
+    "static/media/gambar-portfolio2.png": "/static/media/gambar-portfolio2.3ae8fc2282f9480e91c5.png",
+    "static/media/gambar-portfolio3.png": "/static/media/gambar-portfolio3.6d417727e10505b16dff.png",
+    "static/media/gambar-portfolio1.png": "/static/media/gambar-portfolio1.2a7652bed17ddf0bc19b.png",
+    "static/media/gambar-portfolio4.png": "/static/media/gambar-portfolio4.f175c092fc06aedaaac5.png",
+    "static/media/profilPhoto.jpeg": "/static/media/profilPhoto.4db87930234f007da010.jpeg",
+    "index.html": "/index.html",
+    "main.5857ab15.css.map": "/static/css/main.5857ab15.css.map",
+    "main.ee10f602.js.map": "/static/js/main.ee10f602.js.map",
+    "787.8977447c.chunk.js.map": "/static/js/787.8977447c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5857ab15.css",
+    "static/js/main.ee10f602.js"
+  ]
+}
